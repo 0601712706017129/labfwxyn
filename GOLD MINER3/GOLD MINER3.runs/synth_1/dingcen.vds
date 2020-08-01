@@ -1,0 +1,995 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov  5 12:23:42 2019
+# Process ID: 2856
+# Current directory: D:/vivadoprojects/GOLD MINER3/GOLD MINER3.runs/synth_1
+# Command line: vivado.exe -log dingcen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dingcen.tcl
+# Log file: D:/vivadoprojects/GOLD MINER3/GOLD MINER3.runs/synth_1/dingcen.vds
+# Journal file: D:/vivadoprojects/GOLD MINER3/GOLD MINER3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source dingcen.tcl -notrace
+Command: synth_design -top dingcen -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10072 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 386.523 ; gain = 99.648
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dingcen' [D:/vivadoprojects/GOLD MINER3/dingcen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'vga' [D:/vivadoprojects/GOLD MINER3/vga.v:2]
+	Parameter hsync_end bound to: 10'b0001011111 
+	Parameter hdat_begin bound to: 10'b0010001111 
+	Parameter hdat_end bound to: 10'b1100001111 
+	Parameter hpixel_end bound to: 10'b1100011111 
+	Parameter vsync_end bound to: 10'b0000000001 
+	Parameter vdat_begin bound to: 10'b0000100010 
+	Parameter vdat_end bound to: 10'b1000000010 
+	Parameter vline_end bound to: 10'b1000001100 
+WARNING: [Synth 8-3848] Net h_dat in module/entity vga does not have driver. [D:/vivadoprojects/GOLD MINER3/vga.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (1#1) [D:/vivadoprojects/GOLD MINER3/vga.v:2]
+INFO: [Synth 8-6157] synthesizing module 'hooktry3' [D:/vivadoprojects/GOLD MINER3/hooktry3.v:2]
+	Parameter site_x0 bound to: 450 - type: integer 
+	Parameter site_y0 bound to: 50 - type: integer 
+	Parameter hook_r bound to: 10 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprojects/GOLD MINER3/hooktry3.v:163]
+WARNING: [Synth 8-6090] variable 'pengdao' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/vivadoprojects/GOLD MINER3/hooktry3.v:176]
+INFO: [Synth 8-6155] done synthesizing module 'hooktry3' (2#1) [D:/vivadoprojects/GOLD MINER3/hooktry3.v:2]
+WARNING: [Synth 8-350] instance 'U1' of module 'hooktry3' requires 8 connections, but only 7 given [D:/vivadoprojects/GOLD MINER3/dingcen.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'dingcen' (3#1) [D:/vivadoprojects/GOLD MINER3/dingcen.v:2]
+WARNING: [Synth 8-3331] design hooktry3 has unconnected port clk
+WARNING: [Synth 8-3331] design hooktry3 has unconnected port rst
+WARNING: [Synth 8-3331] design dingcen has unconnected port an
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 442.762 ; gain = 155.887
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 442.762 ; gain = 155.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 442.762 ; gain = 155.887
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/vivadoprojects/GOLD MINER3/xdc.xdc]
+Finished Parsing XDC File [D:/vivadoprojects/GOLD MINER3/xdc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivadoprojects/GOLD MINER3/xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dingcen_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dingcen_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 771.855 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 771.855 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 771.855 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 771.855 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 771.855 ; gain = 484.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 771.855 ; gain = 484.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 771.855 ; gain = 484.980
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:82]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:84]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:86]
+INFO: [Synth 8-5544] ROM "v_dat" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/vivadoprojects/GOLD MINER3/hooktry3.v:110]
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_y_pos_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 771.855 ; gain = 484.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 21    
+	   4 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 16    
+	   2 Input     10 Bit       Adders := 6     
++---XORs : 
+	   2 Input      3 Bit         XORs := 2     
++---Registers : 
+	               10 Bit    Registers := 13    
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Multipliers : 
+	                32x32  Multipliers := 20    
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 15    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vga 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 12    
+	   4 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 8     
+	   2 Input     10 Bit       Adders := 2     
++---XORs : 
+	   2 Input      3 Bit         XORs := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 10    
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module hooktry3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 9     
+	   3 Input     32 Bit       Adders := 8     
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 11    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 10    
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 3     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:82]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:80]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:80]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:94]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:94]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:92]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:92]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:90]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:88]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/vga.v:86]
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: Generating DSP v_dat3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+DSP Report: operator v_dat3 is absorbed into DSP v_dat3.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/vivadoprojects/GOLD MINER3/hooktry3.v:129]
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengdao2, operation Mode is: A*B.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengdao2, operation Mode is: A*B.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: Generating DSP pengdao2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengnum3, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: operator pengnum3 is absorbed into DSP pengnum3.
+DSP Report: Generating DSP pengdao2, operation Mode is: A*B.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: Generating DSP pengdao2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: Generating DSP pengdao2, operation Mode is: A*B.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: Generating DSP pengdao2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: operator pengdao2 is absorbed into DSP pengdao2.
+DSP Report: Generating DSP pengnum2, operation Mode is: A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: Generating DSP pengnum2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: Generating DSP pengnum2, operation Mode is: A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: Generating DSP pengnum2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: Generating DSP pengnum2, operation Mode is: A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: Generating DSP pengnum2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: Generating DSP pengnum2, operation Mode is: A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: Generating DSP pengnum2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+DSP Report: operator pengnum2 is absorbed into DSP pengnum2.
+WARNING: [Synth 8-3331] design hooktry3 has unconnected port clk
+WARNING: [Synth 8-3331] design hooktry3 has unconnected port rst
+WARNING: [Synth 8-3331] design dingcen has unconnected port an
+INFO: [Synth 8-3886] merging instance 'U0/v_dat_reg[1]' (FDS) to 'U0/v_dat_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/data_reg[1]' (FD) to 'U0/data_reg[2]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 771.855 ; gain = 484.980
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 92, Available = 90. Use report_utilization command for details.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U0/v_dat3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: operator U0/v_dat3 is absorbed into DSP U0/v_dat3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengdao2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengdao2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: Generating DSP U1/pengdao2, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengnum3, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: operator U1/pengnum3 is absorbed into DSP U1/pengnum3.
+DSP Report: Generating DSP U1/pengdao2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: Generating DSP U1/pengdao2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: Generating DSP U1/pengdao2, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: operator U1/pengdao2 is absorbed into DSP U1/pengdao2.
+DSP Report: Generating DSP U1/pengnum2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: Generating DSP U1/pengnum2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: Generating DSP U1/pengnum2, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: Generating DSP U1/pengnum2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: Generating DSP U1/pengnum2, operation Mode is (post resource management): A*B.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: Generating DSP U1/pengnum2, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+DSP Report: operator U1/pengnum2 is absorbed into DSP U1/pengnum2.
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|vga         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vga         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|hooktry3    | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 817.395 ; gain = 530.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 819.488 ; gain = 532.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net n_0_1288 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_1260 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     2|
+|2     |CARRY4  |   245|
+|3     |DSP48E1 |    70|
+|4     |LUT1    |    24|
+|5     |LUT2    |   773|
+|6     |LUT3    |   146|
+|7     |LUT4    |   211|
+|8     |LUT5    |   126|
+|9     |LUT6    |   142|
+|10    |FDRE    |   142|
+|11    |IBUF    |     3|
+|12    |OBUF    |     5|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+---------+------+
+|      |Instance |Module   |Cells |
++------+---------+---------+------+
+|1     |top      |         |  1889|
+|2     |  U0     |vga      |   980|
+|3     |  U1     |hooktry3 |   899|
++------+---------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 863.621 ; gain = 247.652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 863.621 ; gain = 576.746
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 315 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 863.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+63 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 863.621 ; gain = 589.379
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 863.621 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/vivadoprojects/GOLD MINER3/GOLD MINER3.runs/synth_1/dingcen.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dingcen_utilization_synth.rpt -pb dingcen_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  5 12:24:32 2019...
